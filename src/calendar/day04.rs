@@ -74,7 +74,7 @@ fn check_sw(search: &Vec<Vec<&str>>, i: usize, j: usize) -> bool {
 
 fn check_xmas(search: &Vec<Vec<&str>>, i: usize, j: usize) -> bool {
     // println!("check_xmas: {} {}", j, i);
-    if search[i+1][j+1] != "A" { println!("fail1"); return false; }
+    if search[i+1][j+1] != "A" { return false; }
     if !((search[i][j] == "M" && search[i+2][j+2] == "S") ||
         (search[i][j] == "S" && search[i+2][j+2] == "M")) { return false; }
     return (search[i][j] == search[i][j+2] &&
